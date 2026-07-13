@@ -1,0 +1,98 @@
+﻿@{
+    ViewData["Title"] = "Get Started";
+}
+
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+
+        <h1 class="fw-bold text-success">
+            Join FarmLink
+        </h1>
+
+        <p class="lead">
+            Choose how you want to use FarmLink.
+        </p>
+
+    </div>
+
+    <div class="row g-4">
+
+        <!-- Farmer -->
+        <div class="col-md-6">
+
+            <div class="card shadow h-100 border-0">
+
+                <div class="card-body text-center p-5">
+
+                    <div style="font-size:70px;">
+                        🌾
+                    </div>
+
+                    <h2 class="mt-3">
+                        Farmer
+                    </h2>
+
+                    <p class="text-muted">
+
+                        Sell fresh vegetables directly
+                        to customers in Cebu City.
+
+                    </p>
+
+                    <a asp-controller="Account"
+                       asp-action="Register"
+                       asp-route-role="Farmer"
+                       class="btn btn-success btn-lg">
+
+                        Register as Farmer
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Customer -->
+
+        <div class="col-md-6">
+
+            <div class="card shadow h-100 border-0">
+
+                <div class="card-body text-center p-5">
+
+                    <div style="font-size:70px;">
+                        🛒
+                    </div>
+
+                    <h2 class="mt-3">
+                        Customer
+                    </h2>
+
+                    <p class="text-muted">
+
+                        Buy fresh vegetables from
+                        local farmers.
+
+                    </p>
+
+                    <a asp-controller="Account"
+                       asp-action="Register"
+                       asp-route-role="Customer"
+                       class="btn btn-warning btn-lg">
+
+                        Register as Customer
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

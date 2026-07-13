@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Customer Dashboard";
+}
+
+<div class="container mt-5">
+    <h2>🛒 Customer Dashboard</h2>
+
+    <hr />
+
+    <h4>
+        Welcome, @Context.Session.GetString("FullName")
+    </h4>
+
+    <p>
+        This is the Customer Dashboard.
+    </p>
+</div>

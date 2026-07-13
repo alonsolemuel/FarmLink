@@ -1,0 +1,146 @@
+﻿@{
+    ViewData["Title"] = "Farmer Dashboard";
+}
+
+<div class="container mt-5">
+
+    <h2 class="mb-2">
+        🌾 Farmer Dashboard
+    </h2>
+
+    <p class="text-muted">
+        Welcome,
+        <strong>@Context.Session.GetString("FullName")</strong>
+    </p>
+
+    <div class="row mt-4">
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow h-100">
+
+                <div class="card-body text-center">
+
+                    <h1>➕</h1>
+
+                    <h5>Add Product</h5>
+
+                    <p>
+                        Add new vegetables to your store.
+                    </p>
+
+                    <a asp-controller="Product"
+                       asp-action="Create"
+                       class="btn btn-success">
+
+                        Open
+
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow h-100">
+
+                <div class="card-body text-center">
+
+                    <h1>📦</h1>
+
+                    <h5>My Products</h5>
+
+                    <p>
+                        View and manage your products.
+                    </p>
+
+                    <a asp-controller="Product"
+                       asp-action="Index"
+                       class="btn btn-primary">
+
+                        Open
+
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow h-100">
+
+                <div class="card-body text-center">
+
+                    <h1>📋</h1>
+
+                    <h5>Orders</h5>
+
+                    <p>
+                        View customer orders.
+                    </p>
+
+                    <button class="btn btn-secondary" disabled>
+                        Coming Soon
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-4">
+
+            <div class="card shadow h-100">
+
+                <div class="card-body text-center">
+
+                    <h1>💬</h1>
+
+                    <h5>Messages</h5>
+
+                    <p>
+                        Chat with customers.
+                    </p>
+
+                    <button class="btn btn-secondary" disabled>
+                        Coming Soon
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 mb-4">
+
+            <div class="card shadow h-100">
+
+                <div class="card-body text-center">
+
+                    <h1>👤</h1>
+
+                    <h5>Profile</h5>
+
+                    <p>
+                        Manage your account.
+                    </p>
+
+                    <button class="btn btn-secondary" disabled>
+                        Coming Soon
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

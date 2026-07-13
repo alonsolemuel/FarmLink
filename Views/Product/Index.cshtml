@@ -1,0 +1,85 @@
+﻿@model IEnumerable<FarmLink.Models.Product>
+
+@{
+    ViewData["Title"] = "My Products";
+}
+
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <h2>🌾 My Products</h2>
+
+        <a asp-action="Create" class="btn btn-success">
+            + Add Product
+        </a>
+
+    </div>
+
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <div class="card shadow h-100">
+
+                    @if (!string.IsNullOrEmpty(item.ImagePath))
+                    {
+                        <img src="~/images/products/@item.ImagePath"
+                             class="card-img-top"
+                             style="height:250px;object-fit:cover;">
+                    }
+                    else
+                    {
+                        <img src="https://via.placeholder.com/400x250?text=No+Image"
+                             class="card-img-top">
+                    }
+
+                    <div class="card-body">
+
+                        <h4 class="fw-bold">
+                            @item.ProductName
+                        </h4>
+
+                        <span class="badge bg-success mb-2">
+                            @item.Category
+                        </span>
+
+                        <p class="text-muted">
+                            @item.Description
+                        </p>
+
+                        <h5 class="text-success fw-bold">
+                            ₱@item.Price.ToString("N2") / @item.Unit
+                        </h5>
+
+                        <p>
+                            <strong>Available:</strong>
+                            @item.Quantity @item.Unit
+                        </p>
+
+                    </div>
+
+                    <div class="card-footer bg-white">
+
+                        <a asp-action="Edit"
+                           asp-route-id="@item.Id"
+                           class="btn btn-warning w-100 mb-2">
+                            ✏️ Edit
+                        </a>
+
+                        <a class="btn btn-danger w-100">
+                            🗑 Delete
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        }
+
+    </div>
+
+</div>
