@@ -40,7 +40,7 @@ Views/         Razor pages
 
 1. Clone the repo
    ```bash
-   git clone https://github.com/Aya12234567/FarmLink.git
+   git clone https://github.com/alonsolemuel/FarmLink.git
    cd FarmLink
    ```
 2. Update the connection string in `appsettings.json` if your MySQL user/password is different
